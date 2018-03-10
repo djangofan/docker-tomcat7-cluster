@@ -1,0 +1,40 @@
+portal:
+  image: nginx
+  ports:
+   - "10010:10080"
+  volumes:
+   - ${PWD}/nginx:/etc/nginx/conf.d
+  links:
+   - tomcatOne:tomcat1
+   - tomcatTwo:tomcat2
+   - tomcatTre:tomcat3
+tomcatOne:
+  image: 'tomcat:7.0.85-jre8-alpine'
+  ports:
+    - "10001:10080"
+  expose:
+    - "10001"
+  volumes:
+   - ${PWD}/conf/server.xml:/usr/local/tomcat/conf/server.xml
+   - ${PWD}/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+   - ${PWD}/ROOT:/usr/local/tomcat/webapps/ROOT
+tomcatTwo:
+  image: 'tomcat:7.0.85-jre8-alpine'
+  ports:
+    - "10002:10080"
+  expose:
+    - "10002"
+  volumes:
+   - ${PWD}/conf/server.xml:/usr/local/tomcat/conf/server.xml
+   - ${PWD}/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+   - ${PWD}/ROOT:/usr/local/tomcat/webapps/ROOT
+tomcatTre:
+  image: 'tomcat:7.0.85-jre8-alpine'
+  ports:
+    - "10003:10080"
+  expose:
+    - "10003"
+  volumes:
+   - ${PWD}/conf/server.xml:/usr/local/tomcat/conf/server.xml
+   - ${PWD}/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+   - ${PWD}/ROOT:/usr/local/tomcat/webapps/ROOT
