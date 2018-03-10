@@ -1,9 +1,9 @@
 portal:
   image: nginx
   ports:
-   - "10010:10080"
+   - "10080:80"
   volumes:
-   - ${PWD}/nginx:/etc/nginx/conf.d
+   - ${PWD}/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
   links:
    - tomcatOne:tomcat1
    - tomcatTwo:tomcat2
