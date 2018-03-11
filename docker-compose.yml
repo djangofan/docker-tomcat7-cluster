@@ -3,7 +3,8 @@ portal:
   ports:
    - "10080:80"
   volumes:
-   - ${PWD}/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+   - ${PWD}/nginx:/etc/nginx
+   #- ${PWD}/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
   links:
    - tomcatOne:tomcat1
    - tomcatTwo:tomcat2
