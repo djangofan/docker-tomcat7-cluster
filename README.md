@@ -7,6 +7,7 @@ https://tomcat.apache.org/tomcat-7.0-doc/cluster-howto.html
 ## Intentions
 
 ```
+Round Robin, Not Sticky
 Portainer 9000
 NGinx 10080
 Tomcat1 10081
@@ -36,6 +37,8 @@ Tomcat Internal Container Ports: 10080 + 10443 + 10009
 #### Run the cluster defined in this project:
 
     docker-compose up
+    
+    http://192.168.99.100:10080/ or http://localhost:10080/
 
 
 
