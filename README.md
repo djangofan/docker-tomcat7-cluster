@@ -2,9 +2,6 @@
 
 A experiment running a docker cluster.  Runs 3 Tomcat machines and 1 NGinx machine in tandem.
 
-Trying to solve error here:
-https://stackoverflow.com/questions/44338276/error-in-server-xml-file-for-tomcat-cluster-with-nginx
-
 https://tomcat.apache.org/tomcat-7.0-doc/cluster-howto.html
 
 ## Intentions
