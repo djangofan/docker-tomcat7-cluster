@@ -42,3 +42,6 @@ Tomcat Internal Container Ports: 10080 + 10443 + 10009
 
 
 
+#### Notes
+
+In NGINX doesnt start, just make sure there is a logs dir in the nginx folder before you start.  It isn't checked into GIT.
