@@ -22,7 +22,7 @@ Tomcat Internal Container Ports: 10080 + 10443 + 10009
 
 #### Run Portainer so you can view the docker config:
 
-    docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --no-auth
+    docker run -d --restart unless-stopped -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /var:/data portainer/portainer --no-auth
 
     http://192.168.99.100:9000/ or http://localhost:9000/
 
